@@ -1,0 +1,23 @@
+.header{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+        &__logo{
+            margin: 0 auto;
+            height: 36px;
+        }
+        &__location{
+            height: 63px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: var(--grey-color);
+        }
+            &__input{
+                border:0px;
+                background-color: var(--grey-color);
+                margin-left: 17px;
+            }
+
+}

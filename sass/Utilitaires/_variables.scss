@@ -1,0 +1,15 @@
+/* COULEURS*/
+
+    $primaire-color: #9356DC;
+    $secondaire-color: #FF79DA;
+    $tertiaire-color: #99E2D0;
+
+    $white-color:#FFFFFF;
+    $grey-color:#eaeaeab3;
+
+    /*BACKGROUD*/
+    
+    $background: linear-gradient($secondaire-color, $primaire-color);
+    $like-backgroud:linear-gradient($primaire-color, $secondaire-color);
+
+    

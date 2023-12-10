@@ -13,54 +13,49 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400&family=Shrikhand&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/assets/css/style.css">
     <title>ohmyfood</title>
 </head>
 <body>
     <header class="header">
         <img class="header__logo" src="./assets/images/logo/ohmyfood@2x.svg" alt="logo" >
         
-        <div class="location">
-            <div class="icon-location">
-                <i class="fa-solid fa-location-dot"></i>
-            </div>
+        <div class="header__location">
+            <i class="fa-solid fa-location-dot"></i>
             <input type="text" placeholder="Paris, Belleville">
         </div>
     </header>
     <main>
-        <section class="recherche-restau">
-            <h1 class="menu">Réservez le menu qui
+        <section class="infoGroup flex-column">
+            <h1 class="infoGroup__h1">Réservez le menu qui
                 vous convient</h1>
-            <p class="restau">Découvrez des restaurants d’exception, sélectionnés par nos soins.</p>
-            <button class="button">
-                <p>Explorer nos restaurants</p>
-            </button>
-
+            <p class="infoGroup__p">Découvrez des restaurants d’exception, sélectionnés par nos soins.</p>
+            <button class="infoGroup__btn .button">Explorer nos restaurants</button>
         </section>
-        <section class="fonctionnement">
-            <h1> fonctionnement</h1>
-            <div class="choix-fonctionnement">
-                <div class="choix">
-                    <div><span>1</span></div>
+        <section class="fonction flex-column">
+            <h1 class="fonction__h1"> fonctionnement</h1>
+            <div class="suggestion">
+                <div class="suggestion__choix">
+                    <div class="btn-rond"><span>1</span></div>
                     <div><i class="fa-solid fa-mobile-screen-button"></i></div>
                     <p>Choisissez un restaurant</p>
                 </div>
-                <div class="choix">
-                    <div><span>2</span></div>
+                <div class="suggestion__choix">
+                    <div class="btn-rond"><span>2</span></div>
                     <div><i class="fa-solid fa-list-ul"></i></div>
                     <p>Composez votre menu</p>
                 </div>
-                <div class="choix">
-                    <div><span>3</span></div>
+                <div class="suggestion__choix">
+                    <div class="btn-rond"><span>3</span></div>
                     <div><i class="fa-solid fa-store"></i></div>
                     <p>Dégustez au restaurant</p>
                 </div>
             </div>
         </section>
-        <section class="restaurants">
+        <section class="choix-restaurants flex-column">
             <h1>Restaurants </h1>
-            <div class=" menu-restautants">
-                <article > 
+            <div class="flex-column">
+                <article class="carte"> 
                     <a href="" class="card_lien">
                     <img class="plat" src="./assets/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="La palette du goût">
                     <div>
@@ -72,7 +67,7 @@
                     </div>
                 </a>
                 </article>
-                <article  >
+                <article  class="carte">
                     <img class="plat" src="./assets/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="La note enchantée">
                     <div>
                         <div>
@@ -82,7 +77,7 @@
                         <div><i class="fa-regular fa-heart"></i></div>
                     </div>
                 </article>
-                <article  >
+                <article class="carte" >
                     <img class="plat" src="./assets/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="À la française">
                     <div>
                         <div>
@@ -93,7 +88,7 @@
                         <div><i class="fa-regular fa-heart"></i></div>
                     </div>
                 </article>
-                <article  >
+                <article class="carte" >
                     <img class="plat" src="./assets/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="Le délice des sens">
 
                     <div>
@@ -106,7 +101,7 @@
                 </article>
             </div>
         </section>
-        <footer>
+        <footer class="footer flex-column">
             <img src="./assets/images/logo/ohmyfood@2x.svg" alt="">
             <div>
                 <div>
