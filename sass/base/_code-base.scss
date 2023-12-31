@@ -1,0 +1,135 @@
+//styles de balise HTML
+body{
+    background-color:$greylight-color;
+}
+
+.loader{                                  //styles pour le loader 
+    position:fixed;
+    height:100%;
+    width: 100%;
+    z-index: 1000;                      // Permet de positionner le loader au-dessus du contenu 
+    background-color: #ffffffc9;       //Couleur et opacité du fond 
+    @include flex-center;               //permet de centrer le loader horizontalement et verticalement dans l'écran.
+    animation: loader 0.5s ease-out;
+    animation-delay: 1.2s;             // Ajoute un délai de 1 seconde avant de démarrer l'animation
+    animation-fill-mode: both;          //Spécifie que les styles de l'animation doivent être conservés avant son démarrage et après sa fin.
+    &__item{                          // styles pour le contenu du loader (L'animation spin au milieu de l'écran)
+        border: 8px solid $primaire-color;
+        border-top: 8px solid $secondaire-color;
+        border-bottom: 8px solid $secondaire-color;
+        border-radius: 50%;
+        width: 80px;
+        height: 80px;
+        animation: spin 1.2s linear infinite; //raccourci:  Applique l'animation nommée "spin" avec une durée de 1.2 seconde, une fonction de temporisation "linear" et en boucle infinie.
+    }
+}
+@keyframes loader { //Définit l'animation nommée "loader" avec des étapes clés pour modifier l'opacité de l'élément au fil du temps.
+    0%{
+        opacity:1;
+    }
+    50%{
+        opacity:0.5;
+    }
+    100% {
+        opacity:0; 
+        z-index: -1000;
+    }
+} 
+
+@keyframes spin { // Définit l'animation nommée "spin" avec des étapes clés pour faire tourner l'élément sur lui-même.
+    0%{ 
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+.infoGroup{
+    @include flex-col-cent;
+    &__title{
+        width: 60%;
+        text-align: center;
+        font-size: 30px;
+        font-weight: 700;
+        @include roboto;  
+    }
+    &__info{
+        width: 60%;
+        text-align: center;
+        margin-bottom: 30px;
+    }
+    &__btn{
+        width: 218px;
+        &:hover{
+            cursor: pointer;
+            opacity: 0.7;
+            @include btn-shadow;
+        }
+    }
+    @media (min-width:1024px){
+        background-color: $greylight-color;
+        padding-bottom: 30px;
+    }
+}
+
+.fonctionnement{
+    padding: 20px;
+    background-color: $white-color;
+    padding: 2% 10%;
+
+    &__h2{
+        font-size: 24px;
+    }
+
+    .suggestion{
+        margin-top: 30px;
+        
+        &__choix{
+            @include flex-start;
+            background-color:$greylight-color;
+            border-radius: 20px;
+            margin-bottom: 25px;
+            position: relative;
+            @include btn-shadow;   
+            height: 60px; 
+
+            @media (min-width:1024px){
+                @include flex-start;
+                width: 30%;
+            }
+        }
+            
+        &__p, &__i{
+                
+            @include margin-left;
+                
+        }
+        &__choix:nth-of-type(1):hover{
+            .suggestion__i{ 
+                @include icon-hover;  
+            } 
+                
+        }    
+        &__choix:nth-of-type(2):hover{
+            .suggestion__i{
+                @include icon-hover;
+            }  
+        }    
+        &__choix:nth-of-type(3):hover{
+            .suggestion__i{
+                @include icon-hover;
+            }  
+        } 
+
+        @media (min-width:1024px){
+            @include flex-space;
+        }      
+    }
+}
+
+.restaurant{
+    &__h2{
+        font-size: 24px;
+    }
+}

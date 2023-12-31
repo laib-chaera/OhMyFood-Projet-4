@@ -1,0 +1,43 @@
+
+  .heart-marg{
+    margin-right: 20px;
+  }
+  .heart-empty{
+    //affiché au début
+    opacity:1 ;
+    position: absolute;
+    
+  }
+  .heart-full{
+    // masqué au début
+    opacity: 0;
+    background: linear-gradient(#FF79DA, #9356DC);
+    @include background-clip;
+    // -webkit-background-clip: text;
+    // -webkit-text-fill-color: transparent;
+    position: absolute;
+  }
+
+  .card__icon{
+    position: relative;
+    width: 15px;
+    height: 15px;
+    cursor:default;
+  }
+
+  .card__icon:hover{  //l'état des deux coeurs après le survol
+    
+    //coeur empty caché, 
+
+    .heart-empty{
+      transition: 0.5s linear;
+      opacity:0 ;
+
+  //coeur full affiché
+    }
+    .heart-full{
+      transition: 0.5s linear;
+      opacity: 1;
+    }
+  }
+  

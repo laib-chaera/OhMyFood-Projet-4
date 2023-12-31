@@ -1,0 +1,50 @@
+//Fichiers sass de styles spécifiques 
+//header accueil
+.header{ 
+        &__logo{
+            @include flex-center;
+            background-color: $white-color;
+            width: 100%;
+            height: 63px;
+        }
+        &__location{
+            width: 100%;
+            height: 40px;
+            @include flex-center;
+            background-color: $grey-color;
+        }
+            &__fa-solid{
+                margin-left: 60px;
+                text-align: center;
+            }
+            &__input{
+                border:0px;
+                background-color: $grey-color;
+                margin-left: 17px;
+                &__placeholder{
+                    color: rgb(43, 19, 151);
+                }  
+            }
+
+        
+}
+
+//header menus
+.headerMenu{
+    width: 100%;
+    height: 63px;
+    padding: 14px 0px 0px 0px;
+    gap: 42px;
+    @include flex-start;
+
+    &__icon{
+        margin-left: 20px
+    }
+    &__title{
+        margin: 0 auto;
+        
+        @media (min-width:1024px){
+            margin: 0 auto;
+        }
+    }
+}

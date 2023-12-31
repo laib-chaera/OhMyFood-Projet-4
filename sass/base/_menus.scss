@@ -1,0 +1,169 @@
+body{
+    background-color: $white-color;  
+}
+
+.section{ 
+    background-color: $greylight-color;
+
+    @media (min-width: 1024px){
+        background-color: $white-color;   
+    }
+
+    &__img{
+        width: 100%;
+        height:275px ;
+    }
+    &__menus{
+        margin: 0 auto;
+        position: relative;
+        padding: 20px 15px 0px 15px;
+        background-color: $greylight-color;
+        border-radius: 40px 40px 0px 0px;
+        padding-bottom: 50px;
+        margin-top: -50px;
+        @include flex-col;
+        gap: 30px;
+        
+        &__title{
+            @include flex-center;
+            gap: 40px;
+        } 
+
+        @media (min-width: 1024px){
+            width: 75%;
+        }
+    }
+}
+
+.menus{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin: 0 25px;
+}
+.menu{
+    &__h2{
+        border-bottom: 3px solid $tertiaire-color; 
+        width: 50px;
+        font-weight: 200;
+    }    
+ }
+
+ .elem-menu{
+    height: 69px;
+    padding-left: 15px;
+    border-radius: 15px;
+    background:$white-color;
+    box-shadow: 0px 4.011px 15.043px 0px rgba(0, 0, 0, 0.10);
+    @include flex-space; 
+    overflow: hidden;
+    position: relative;
+    opacity: 0;
+    animation: anim 1s linear forwards ;
+
+    @keyframes anim {
+        0% {
+            opacity: 0;
+            // transform: translateY(100%);
+        }
+        50% {
+            opacity: 0.5;
+            // transform: translateY(50%);
+        }
+        100%{
+            opacity: 1;
+            // transform: translateY(0%);
+        }
+    }
+
+    &:hover{
+        .elem-menu__prix{
+            width:100px;   // transition pour la propriété width défini dans &__prix
+        }                   // de 50px à 100px pour décaler le prix à gauche
+        .elem-menu__check{
+            opacity: 1;
+            animation-name: coche2;
+            right: 0px; 
+            transition-timing-function: ease-out; 
+        }
+
+        @keyframes coche2 {
+            0%      {right: -64px; } 
+            100%    {right: 0px;}
+        }
+
+        @keyframes coche1 {
+            0%      {right: 0px;}
+            100%    {right: -64px ;}   
+        }
+    }
+            
+    &__info p, h3{
+        @media (max-width: 420px){
+            width: 150px;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+        }
+    }
+    &__prix{
+        font-weight: bold;
+        padding-top: 15px;
+        margin-bottom: 0px;
+        width: 50px;
+        transition: width 1s ;
+        &__p{
+            display: flex;
+            align-self: flex-end;
+            margin-bottom: 0px;
+        }
+    }
+    &__check{
+        opacity: 0;
+        transition: opacity 1s;
+        width: 64px;
+        height: 69px;
+        background-color: $tertiaire-color;
+        border-radius: 0px 15px 15px 0px;
+        @include flex-center;
+        position: absolute;
+        right: -64px;
+        animation-name: coche1;
+        animation-duration: 1s;
+        
+        
+        .fa-circle-check{
+            color:$tertiaire-color;
+            background-color: white;
+            @include background-clip;
+        } 
+    }
+    
+    &__nom{
+        margin-bottom: 0px;
+    }
+    &__descript{
+        padding-bottom: 10px;
+        margin: 0px 0px 10px 5px ;
+    }
+ }
+
+    .delay1 {
+    animation-delay: 0.3s;
+    }
+    
+    .delay2{
+    animation-delay: 0.6s;
+    }
+
+    .delay3 {
+    animation-delay: 0.9s;
+    }
+
+    .delay4{
+        animation-delay: 1s;    
+    }
+    
+
+
+    

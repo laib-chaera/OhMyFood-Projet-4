@@ -1,0 +1,71 @@
+
+//Définir les flex 
+
+@mixin flex-space{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+@mixin flex-center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@mixin flex-col{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+@mixin flex-col-cent{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center; 
+}
+
+@mixin flex-start{
+    display: flex;
+    align-items: center;
+    justify-content: start;
+
+}
+
+@mixin flex-wrap{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+    justify-content: space-between;
+
+}
+@mixin margin-left{
+    margin-left: 25px;
+}
+
+
+@mixin btn-shadow{
+    box-shadow: 0px 4px 10px 0px #00000069;
+    
+}
+@mixin icon-hover{
+    color: $primaire-color; 
+}
+
+// FONT-FAMILY
+
+@mixin roboto{
+    font-family: roboto, sans-serif;
+}
+@mixin shrikhand{
+    font-family: shrikhand, sans-serif;
+}
+
+// compatibilité arrière-plan d'un élément
+@mixin background-clip{
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+

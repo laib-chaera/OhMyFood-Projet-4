@@ -1,0 +1,36 @@
+//fichier principal: le point d'entrée de mon code Sass. Il regroupera les importations des autres fichiers Sass pour être utilisés.
+
+
+//importation des fichiers scss du dossier abstracts
+@import "./abstracts/variables";
+@import "./abstracts/mixins";
+
+
+
+
+//importation des fichiers scss du dossier base
+
+@import "./base/typography";
+@import "./base/code-base";
+@import "./base/menus";
+
+
+//importation des fichiers scss du dossier compoments
+@import "./compoments/button";
+@import "./compoments/card";
+@import "./compoments/icones";
+
+
+//importation des fichiers scss du dossier layout
+
+@import "./layout/header";
+@import "./layout/footer";
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,37 @@
+//Fichiers sass de styles spécifiques 
+
+
+//LES BOUTONS
+.btn {
+    color: $white-color;
+    border-radius: 25px;
+    height: 50px;
+    border: transparent;
+    margin-bottom: 30px;
+    background: $btn-background;
+    margin: 0 auto;
+  }
+
+
+.btn-rond{
+  width: 24px;
+  height: 24px;  
+  border-radius: 50%;
+  background-color: $primaire-color;
+  color: $white-color;
+  @include flex-center;
+  position: absolute;
+  left: -12px;
+}
+
+.btn-menu{
+  width: 186px;
+  margin-top: 40px;
+  @include flex-center;
+  &:hover{
+    cursor: pointer;
+    opacity: 0.7;
+    @include btn-shadow;
+  }
+}
+ 
