@@ -50,6 +50,7 @@ body{
  }
 
  .elem-menu{
+    opacity: 0;
     height: 69px;
     padding-left: 15px;
     border-radius: 15px;
@@ -58,7 +59,6 @@ body{
     @include flex-space; 
     overflow: hidden;
     position: relative;
-    opacity: 0;
     animation: anim 1s linear forwards ;
 
     @keyframes anim {
@@ -79,12 +79,16 @@ body{
     &:hover{
         .elem-menu__prix{
             width:100px;   // transition pour la propriété width défini dans &__prix
-        }                   // de 50px à 100px pour décaler le prix à gauche
+            
+        } 
+                          // de 50px à 100px pour décaler le prix à gauche
         .elem-menu__check{
             opacity: 1;
-            animation-name: coche2;
-            right: 0px; 
-            transition-timing-function: ease-out; 
+            animation: coche2 1s ease forwards;
+            // animation-name: coche2;
+            // animation-duration: 1s;
+            // animation-fill-mode: forwards;
+            // transition-timing-function: ease-out; 
         }
 
         @keyframes coche2 {
@@ -140,7 +144,7 @@ body{
     }
     
     &__nom{
-        margin-bottom: 0px;
+        margin-bottom: 9px;
     }
     &__descript{
         padding-bottom: 10px;

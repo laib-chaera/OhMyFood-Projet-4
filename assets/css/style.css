@@ -5,6 +5,7 @@
 body {
   margin: 0px;
   padding: 0px;
+  box-sizing: border-box;
   color: black;
   font-family: roboto, sans-serif;
 }
@@ -216,6 +217,7 @@ body {
 }
 
 .elem-menu {
+  opacity: 0;
   height: 69px;
   padding-left: 15px;
   border-radius: 15px;
@@ -226,7 +228,6 @@ body {
   align-items: center;
   overflow: hidden;
   position: relative;
-  opacity: 0;
   animation: anim 1s linear forwards;
 }
 @keyframes anim {
@@ -245,9 +246,7 @@ body {
 }
 .elem-menu:hover .elem-menu__check {
   opacity: 1;
-  animation-name: coche2;
-  right: 0px;
-  transition-timing-function: ease-out;
+  animation: coche2 1s ease forwards;
 }
 @keyframes coche2 {
   0% {
@@ -307,7 +306,7 @@ body {
   -webkit-text-fill-color: transparent;
 }
 .elem-menu__nom {
-  margin-bottom: 0px;
+  margin-bottom: 9px;
 }
 .elem-menu__descript {
   padding-bottom: 10px;
@@ -431,6 +430,7 @@ body {
 .heart-empty {
   opacity: 1;
   position: absolute;
+  font-size: 25px;
 }
 
 .heart-full {
@@ -439,6 +439,7 @@ body {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   position: absolute;
+  font-size: 25px;
 }
 
 .card__icon {
