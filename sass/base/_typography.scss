@@ -2,7 +2,7 @@
 
 :root{
    
-    font-size: 14px;  
+    font-size: 16px;  
     // max-width: 1440px;
 }
 body{
@@ -24,9 +24,15 @@ img{
 
 h1{
     @include shrikhand;
+    font-size: 28px;
+    font-weight: 400;
 }
 h2{
     font-size: 16px;
+}
+
+h3{
+    font-size: 18px;
 }
 
 

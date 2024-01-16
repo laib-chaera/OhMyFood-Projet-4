@@ -10,13 +10,12 @@
     }
 }
 .card{
-    
+    margin-bottom: 40px;
     &__article{
-        // width: 100%;
+        margin-bottom: 20px;
         height: 220px;
         border-radius: 15px;
         background-color: $white-color;
-        // margin-top: 30px;
         position: relative;   
         @media (min-width:1024px){
             width: 45%;

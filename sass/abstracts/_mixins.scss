@@ -47,7 +47,9 @@
 
 
 @mixin btn-shadow{
-    box-shadow: 0px 4px 10px 0px #00000069;
+    box-shadow: 0px 4px 10px 0px #00000040;
+
+    // box-shadow: 0px 4px 10px 0px #00000069;
     
 }
 @mixin icon-hover{

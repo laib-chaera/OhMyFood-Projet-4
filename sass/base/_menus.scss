@@ -85,10 +85,6 @@ body{
         .elem-menu__check{
             opacity: 1;
             animation: coche2 1s ease forwards;
-            // animation-name: coche2;
-            // animation-duration: 1s;
-            // animation-fill-mode: forwards;
-            // transition-timing-function: ease-out; 
         }
 
         @keyframes coche2 {
@@ -100,16 +96,21 @@ body{
             0%      {right: 0px;}
             100%    {right: -64px ;}   
         }
+
+        
+        .elem-menu__nom, .elem-menu__descript{
+
+            @media (max-width: 1024px){
+                width: 150px;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                overflow: hidden;
+            }
+
+        }
+        
     }
             
-    &__info p, h3{
-        @media (max-width: 420px){
-            width: 150px;
-            text-overflow: ellipsis;
-            white-space: nowrap;
-            overflow: hidden;
-        }
-    }
     &__prix{
         font-weight: bold;
         padding-top: 15px;

@@ -1,5 +1,6 @@
 //Fichiers sass de styles spécifiques 
 .footer{
+    
     background-color:$greydarck-color;
     color: $white-color;
     padding: 25px 30px;  
@@ -19,6 +20,15 @@
         color: $white-color;
         height: 25px;
         gap: 10px;
+
+        // &__p:first-child{
+        //     margin-left:9px;
+        // }
+       
+    }
+    
+    &__p{
+        margin-left: 5px;
     }
        
     
@@ -34,4 +44,7 @@
             margin: 0px 0px 7px 20px;   
         }
     }
+}
+.margin{
+    margin-right: 5px;
 }
